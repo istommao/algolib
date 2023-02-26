@@ -1,5 +1,5 @@
-# algolib
-python algo lib
+# algolibs
+python algo libs
 
 ## TODO
 
