@@ -88,3 +88,28 @@ def detect_cycle_linked_node(root):
         fast = fast.next
 
     return fast
+
+
+def reverse_linked_list(root: ListNode) -> ListNode:
+    prev = None
+    curr = root
+
+    while curr:
+        nextnode = curr.next
+        curr.next = prev
+
+        prev = curr
+        curr = nextnode
+
+    return prev
+
+
+def recursion_reverse_linked_list(root: ListNode) -> ListNode:
+    if not root or not root.next:
+        return root
+
+    newroot = recursion_reverse_linked_list(root.next)
+    root.next.next = root
+    root.next = None
+
+    return newhead
